@@ -1,6 +1,8 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
 import datetime
+
+
 class MoviesModel(models.Model):
     id=models.AutoField(primary_key=True)
     Title=models.CharField(max_length=60,blank=False,validators=[MinLengthValidator(3)])
