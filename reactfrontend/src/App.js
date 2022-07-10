@@ -32,19 +32,38 @@ function App() {
        })
      }
      <h2>Add A Movie</h2>
-<form>
+<form action='/add/' method='post'>
   <input
      type="text"
-     name="fullName"
+     name="Title"
      required="required"
-     placeholder="Enteraname ..."
+     placeholder="Enter Movie Title"
   />
   <input
-     type="text"
-     name="address"
+     type="date"
+     name="ReleaseDate"
      required="required"
-     placeholder="Enter an addres ..."
+     placeholder="Enter Release Date"
      />
+     <input
+     type="text"
+     name="Genre"
+     required="required"
+     placeholder="Enter Genre"
+     />
+      <input
+     type="number"
+     name="Price"
+     required="required"
+     placeholder="Enter Price"
+     />
+      <input
+     type="number"
+     name="Ratings"
+     required="required"
+     placeholder="Enter Ratings"
+     />
+     <button type="submit">Add</button>
 </form>
     </div>
   );
