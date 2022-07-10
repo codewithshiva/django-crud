@@ -38,3 +38,12 @@ class DeleteTable(APIView):
             return Response("Not found in database")
         movieObj.delete()
         return Response(200)
+
+class AddTable(APIView):
+    def post(self,request,pk):
+        try:
+            movieObj=MoviesModel.objects.get(pk=pk)
+        except:
+            return Response("Not found in database")
+        movieObj.append()
+        return Response(200)

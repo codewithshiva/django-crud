@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.MoviesTable.as_view()),
     path('update/<int:pk>',views.UpdateTable.as_view()),
-     path('delete/<int:pk>',views.DeleteTable.as_view()),
+    path('delete/<int:pk>',views.DeleteTable.as_view()),
+    path('add/<int:pk>',views.AddTable.as_view()),
 ]
